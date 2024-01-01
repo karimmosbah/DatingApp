@@ -19,11 +19,8 @@ constructor(public accountService: AccountService, private router: Router, priva
 
   login(){
     this.accountService.login(this.model).subscribe({
-      next: _ => this.router.navigateByUrl('/members'),
-      error: error => {
-        this.toastr.error(error.error),
-        console.log(error)
-      }
+      next: _ => this.router.navigateByUrl('/members')
+      
     })
   }
 
